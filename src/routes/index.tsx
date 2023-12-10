@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import Unauthorized from "../layouts/Unauthorized";
-import App from "../App";
+// import Unauthorized from "../layouts/Unauthorized";
+import Default from "../layouts/Default";
+// import App from "../App";
 
 
 
@@ -8,12 +9,12 @@ import App from "../App";
 export default createBrowserRouter([
  {
     element: (
-        <Unauthorized/>
+        <Default/>
     ),
     children: [
         {
             path: "/",
-            element: <App/>
+            element: <></>
         },
         {
             path: "/test",
