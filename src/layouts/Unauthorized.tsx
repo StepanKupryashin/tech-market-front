@@ -2,8 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const Unauthorized = () => {
     return (
-        <div>
-            <h1>Пользователь не авторизован</h1>
+        <div className="flex flex-col items-center justify-center w-full h-full">
         <Outlet/>
         </div>
     )

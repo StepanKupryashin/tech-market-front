@@ -7,3 +7,9 @@ export const getProducts = async () => {
 
     return data.response;
 }
+
+export const getBasket = async (products: Array<number>) => { 
+    const { data } = await axiosInstance.get(`/api/user/basket/?products=${JSON.stringify(products)}`);
+
+    return data.response;
+}
