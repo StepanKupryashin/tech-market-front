@@ -18,6 +18,7 @@ type UserStore = {
   getBasket: () => Array<number> | [];
   basket: Array<number>;
   addToBasket: (productId: number) => void;
+  setBasket: (Basket: Array<number>) => void;
 };
 
 const useUserStore = create<UserStore>((set, get) => ({
@@ -43,6 +44,9 @@ const useUserStore = create<UserStore>((set, get) => ({
   getBasket: () => {
     return get().basket;
   },
+  setBasket: (basket: Array<number>) => {
+    set({ basket: basket });
+  }
 }));
 
 export default useUserStore;

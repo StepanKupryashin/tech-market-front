@@ -13,3 +13,25 @@ export const getBasket = async (products: Array<number>) => {
 
     return data.response;
 }
+
+
+export const createOrder = async (products: Array<number>) => {
+    const { data } = await axiosInstance.post('/api/orders', {
+        products: products
+    });
+
+    return data.response;
+}
+
+
+export const getHistoryOrders = async () => {
+    const { data } = await axiosInstance.get('/api/orders');
+    return data.response;
+}
+
+
+export const checkWarranty = async (orderId: string) => { 
+    const { data } = await axiosInstance.get(`/api/orders/${orderId}/warranty`);
+
+    return data.response;
+}
